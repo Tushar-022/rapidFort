@@ -1,0 +1,27 @@
+# Node.js dependencies
+frontend/node_modules/
+backend/node_modules/
+
+# Build outputs
+frontend/dist/
+frontend/build/
+backend/build/
+
+# Environment files
+frontend/.env
+backend/.env
+
+# Uploaded files
+backend/uploads/
+
+# Coverage and logs
+**/coverage/
+**/*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
