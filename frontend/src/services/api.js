@@ -4,7 +4,7 @@ import * as pdfjsLib from 'pdfjs-dist';
 
 
 //const API_BASE_URL = "http://localhost:5000"; 
-const API_BASE_URL = "https://rapid-fort-sr8y.vercel.app/"; 
+const API_BASE_URL = "https://rapid-fort-sr8y.vercel.app"; 
 
 
 // Upload a file and receive metadata
