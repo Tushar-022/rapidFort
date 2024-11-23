@@ -10,10 +10,11 @@ const app = express();
 
 // Configure CORS
 const corsOptions = {
-  origin: process.env.CLIENT_URL || "https://rapid-fort-pink.vercel.app", // Allow frontend domain
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true, // Allow cookies and credentials
+  origin: "*", // Allow requests from all origins
+  methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+  credentials: false, // No cookies or credentials allowed
 };
+
 app.use(cors(corsOptions));
 
 // Middleware for parsing JSON and URL-encoded data
