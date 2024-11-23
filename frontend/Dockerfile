@@ -6,9 +6,10 @@ WORKDIR /app
 
 # Copy package.json and install dependencies
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm ci --legacy-peer-deps
 
-# Copy source code and build the app
+
+# Copy the source code and build the app
 COPY . .
 RUN npm run build
 
@@ -21,5 +22,5 @@ COPY --from=builder /app/build /usr/share/nginx/html
 # Expose port 80 for the web server
 EXPOSE 80
 
-# Start Nginx server
+# Start the Nginx server
 CMD ["nginx", "-g", "daemon off;"]

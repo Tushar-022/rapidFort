@@ -8,10 +8,10 @@ function App() {
   const [metadata, setMetadata] = useState(null);
   const [downloadLink, setDownloadLink] = useState(null);
 
- useEffect(()=>{
-console.log(downloadLink);
+//  useEffect(()=>{
+// console.log(downloadLink);
 
- },[downloadLink])
+//  },[downloadLink])
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center pt-10">
