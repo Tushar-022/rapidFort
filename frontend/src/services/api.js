@@ -3,8 +3,8 @@ import * as pdfjsLib from 'pdfjs-dist';
 
 
 
-const API_BASE_URL = "http://localhost:5000"; 
-//const API_BASE_URL = "https://backend-xi-beryl.vercel.app/"; 
+//const API_BASE_URL = "http://localhost:5000"; 
+const API_BASE_URL = "https://rapid-fort-sr8y-50ukhxg2w-tushar-022s-projects.vercel.app/"; 
 
 // Upload a file and receive metadata
 export const uploadFile = async (file) => {
