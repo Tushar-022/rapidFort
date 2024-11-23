@@ -11,9 +11,5 @@
       "src": "/api/(.*)", 
       "dest": "server.js" 
     }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "CLIENT_URL": "https://rapid-fort-pink.vercel.app"
-  }
+  ]
 }
