@@ -1,9 +1,24 @@
-// import docxPdf from 'docx-pdf';
-// import { getMetadata } from "../controllers/metadataController.js";
-// const convertDocToPdf = (docPath) => {
+
+
+
+import docxPdf from 'docx-pdf';
+import { getMetadata } from "../controllers/metadataController.js";
+import fs from "fs/promises";
+import path from "path";
+
+// const convertDocToPdf = (docPath, fileId) => {
 //   return new Promise((resolve, reject) => {
 //     try {
-//       docxPdf(docPath,"D:/crack_webd in summer 2023/wordToPdf/backend/uploads/ `${fileId}`-${metadata?.filename}.pdf" ,(err, pdfPath) => {
+//       // Fetch the metadata using the fileId
+//       const metadata = getMetadata(fileId);
+
+//       // Construct the output path dynamically
+//       const pdfOutputPath = path.join(
+//         "D:/crack_webd in summer 2023/wordToPdf/backend/uploads/",
+//         `${fileId}-${metadata?.name || 'output'}.pdf`
+//       );
+
+//       docxPdf(docPath, pdfOutputPath, (err, pdfPath) => {
 //         if (err) {
 //           console.error("Error during DOCX to PDF conversion:", err);
 //           return reject(new Error("Failed to convert DOCX to PDF"));
@@ -17,13 +32,7 @@
 //   });
 // };
 
-// export default convertDocToPdf;
-
-
-import docxPdf from 'docx-pdf';
-import { getMetadata } from "../controllers/metadataController.js";
-import fs from "fs/promises";
-import path from "path";
+// Assuming docxPdf is a module you're using
 
 const convertDocToPdf = (docPath, fileId) => {
   return new Promise((resolve, reject) => {
@@ -31,9 +40,12 @@ const convertDocToPdf = (docPath, fileId) => {
       // Fetch the metadata using the fileId
       const metadata = getMetadata(fileId);
 
+      // Get the base uploads directory from an environment variable or use a default
+      const uploadsDir =  path.resolve(__dirname, 'uploads');
+
       // Construct the output path dynamically
       const pdfOutputPath = path.join(
-        "D:/crack_webd in summer 2023/wordToPdf/backend/uploads/",
+        uploadsDir,
         `${fileId}-${metadata?.name || 'output'}.pdf`
       );
 
@@ -50,5 +62,8 @@ const convertDocToPdf = (docPath, fileId) => {
     }
   });
 };
+
+
+
 
 export default convertDocToPdf;
