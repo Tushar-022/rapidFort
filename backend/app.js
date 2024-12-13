@@ -8,20 +8,10 @@ dotenv.config(); // Load environment variables
 
 const app = express();
 
-// Configure CORS
-// const corsOptions = {
-//   origin: "*", // Allow requests from all origins
-//   methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
-//   credentials: false, // No cookies or credentials allowed
-// };
-
-// app.use(cors(corsOptions));
-
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://rapid-fort-pink.vercel.app/","https://rapidfort-1845.onrender.com"], // Add allowed domains
-  methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"], // Allowed methods
-  allowedHeaders: ["Content-Type", "Authorization"], // Headers you expect in requests
-  credentials: true, // Allow cookies or credentials if required
+  origin: '*', // Allow all origins
+  methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 };
 app.use(cors(corsOptions));
 
