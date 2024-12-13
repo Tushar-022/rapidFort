@@ -5,8 +5,9 @@ import docxPdf from 'docx-pdf';
 import { getMetadata } from "../controllers/metadataController.js";
 import fs from "fs/promises";
 import path from "path";
+import { fileURLToPath } from 'url';
 
-// const convertDocToPdf = (docPath, fileId) => {
+
 //   return new Promise((resolve, reject) => {
 //     try {
 //       // Fetch the metadata using the fileId
