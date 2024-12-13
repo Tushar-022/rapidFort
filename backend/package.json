@@ -8,6 +8,7 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
+    "backend": "file:",
     "cors": "^2.8.5",
     "docx-pdf": "^0.0.1",
     "docxtemplater": "^3.54.0",

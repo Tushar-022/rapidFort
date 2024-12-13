@@ -11,8 +11,7 @@ backend/build/
 frontend/.env
 backend/.env
 
-# Uploaded files
-backend/uploads/
+
 
 # Coverage and logs
 **/coverage/

@@ -1,10 +1,13 @@
 import axios from "axios";
 import * as pdfjsLib from 'pdfjs-dist';
+// import dotenv from 'dotenv';
 
+// Load environment variables from .env file
+// dotenv.config();
 
+const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:5000";
+//const API_BASE_URL = "http://localhost:5000";
 
-//const API_BASE_URL = "http://localhost:5000"; 
-const API_BASE_URL = "https://vercel.com/tushar-022s-projects/rapid-fort-sr8y"; 
 
 
 // Upload a file and receive metadata
