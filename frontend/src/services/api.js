@@ -2,7 +2,7 @@ import axios from "axios";
 import * as pdfjsLib from 'pdfjs-dist';
 
 
-const API_BASE_URL ="https://rapid-fort-pink.vercel.app";
+const API_BASE_URL ="https://rapidfort-1845.onrender.com";
 //const API_BASE_URL = "http://localhost:5000";
 
 
