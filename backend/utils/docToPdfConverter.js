@@ -41,13 +41,30 @@ const convertDocToPdf = (docPath, fileId) => {
       const metadata = getMetadata(fileId);
 
       // Get the base uploads directory from an environment variable or use a default
-      const uploadsDir =  path.resolve(__dirname, 'uploads');
+      // const uploadsDir =  path.resolve(__dirname, 'uploads');
+
+      // // Construct the output path dynamically
+      // const pdfOutputPath = path.join(
+      //   uploadsDir,
+      //   `${fileId}-${metadata?.name || 'output'}.pdf`
+      // );
+
+      const __filename = fileURLToPath(import.meta.url);
+      const __dirname = path.dirname(__filename);
+
+      // Construct the uploads directory path
+      const uploadsDir = path.resolve(__dirname, "uploads");
 
       // Construct the output path dynamically
       const pdfOutputPath = path.join(
-        uploadsDir,
-        `${fileId}-${metadata?.name || 'output'}.pdf`
+      uploadsDir,
+      `${fileId}-${metadata?.name || "output"}.pdf`
       );
+
+     // const pdfOutputPath = path.join(
+        //         "D:/crack_webd in summer 2023/wordToPdf/backend/uploads/",
+        //         `${fileId}-${metadata?.name || 'output'}.pdf`
+        //       );
 
       docxPdf(docPath, pdfOutputPath, (err, pdfPath) => {
         if (err) {
