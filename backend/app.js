@@ -18,7 +18,7 @@ const app = express();
 // app.use(cors(corsOptions));
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://rapid-fort-pink.vercel.app/"], // Add allowed domains
+  origin: ["http://localhost:3000", "https://rapid-fort-pink.vercel.app/","https://rapidfort-1845.onrender.com"], // Add allowed domains
   methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"], // Allowed methods
   allowedHeaders: ["Content-Type", "Authorization"], // Headers you expect in requests
   credentials: true, // Allow cookies or credentials if required
